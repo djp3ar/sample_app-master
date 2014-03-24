@@ -1,0 +1,38 @@
+if @user.accounttype = "nurse"
+
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  <section>
+  <%= gravatar_for @user %>
+  <%= link_to "change", 'http://gravatar.com/emails', target: "_blank" %> <br>
+    </section>
+    <br><%= form_for(@user) do |f| %>
+      <%= render 'pfields', f: f %>
+      <!-- Single button -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    
+  </div>
+</div>
+
+else
+  <% provide(:title, "Edit user") %>
+  <h1>Update your profile</h1>

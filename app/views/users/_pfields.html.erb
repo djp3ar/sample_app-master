@@ -1,0 +1,39 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :email %>
+<%= f.text_field :email %>
+
+<%= f.label :accounttype , "Account Type" %>
+<%= f.select :accounttype, [['Nursing Student','nursingstudent'],['Experienced Nurse','nurse']] %>
+
+<h1>
+Education
+</h1>
+
+<%= f.label :university %>
+<%= f.text_field :university %>
+
+<%= f.label :degree %>
+<%= f.text_field :degree %>
+
+<%= f.label :gpa, "GPA" %>
+<%= f.text_field :gpa %>
+
+<h1>
+Work Experience
+</h1>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :employer %>
+<%= f.text_field :employer %>
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+
+<%= f.label :password_confirmation, "Confirm Password" %>
+<%= f.password_field :password_confirmation %>

@@ -1,0 +1,40 @@
+<div class="row">
+  <aside class="span4">
+    <section>
+      <%= render 'shared/user_info' %>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+    <br>
+    <h3>Statistics</h3>
+    <div class="left">
+  <%= image_tag 'http://farm8.staticflickr.com/7210/6943628187_0a46cb8c01.jpg', :height => 300 %> 
+  <h3>Inbox</h3>
+  </div>
+  <%= render 'shared/feed' %>
+  <%= render 'shared/micropost_form' %>
+    <br>
+  </aside>
+  
+  <div class="span8">
+  <section>
+  
+  <% provide(:title, @user.name) %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+    </aside>
+    <div class="span8">
+    <section>
+   <%= render 'shared/feed' %>
+    </div>
+  </div>
+   
+    <section>
+      <br>
+      
+      
+      </section>
+  </div>
+</div>
